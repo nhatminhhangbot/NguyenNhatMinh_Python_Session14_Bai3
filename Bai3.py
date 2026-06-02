@@ -150,24 +150,21 @@ def evaluate_students(student_list):
         rank = get_rank(avg_score)
         print(f"Mã: {student['student_id']} | Tên: {student['name']:<15} | ĐTB: {avg_score:.2f} | Xếp loại: {rank}")
 
-def main():
-    while True:
-        display_menu()
-        choice = input("Nhập lựa chọn của bạn (1-5): ").strip()
-        
-        if choice == "1":
-            display_students(students)
-        elif choice == "2":
-            add_student(students)
-        elif choice == "3":
-            update_score(students)
-        elif choice == "4":
-            evaluate_students(students)
-        elif choice == "5":
-            print("\nCảm ơn bạn đã sử dụng hệ thống!")
-            break
-        else:
-            print("Lựa chọn không hợp lệ, vui lòng nhập lại!")
 
-if __name__ == "__main__":
-    main()
+while True:
+    display_menu()
+    choice = input("Nhập lựa chọn của bạn (1-5): ").strip()
+        
+    if choice == "1":
+        display_students(students)
+    elif choice == "2":
+        add_student(students)
+    elif choice == "3":
+        update_score(students)
+    elif choice == "4":
+        evaluate_students(students)
+    elif choice == "5":
+        print("\nCảm ơn bạn đã sử dụng hệ thống!")
+        break
+    else:
+        print("Lựa chọn không hợp lệ, vui lòng nhập lại!")
